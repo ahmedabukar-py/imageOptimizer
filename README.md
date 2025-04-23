@@ -1,4 +1,4 @@
-# 🖼️ Serverless Image Optimization Platform (Go Edition)
+# 🖼️ Serverless Image Optimization Platform 
 
 A fully serverless image processing pipeline built with AWS services, written in Go, and managed using Terraform. Users can upload images, which are automatically optimized (e.g. resized or converted to WebP) and delivered globally via signed CloudFront URLs.
 
