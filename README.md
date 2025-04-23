@@ -4,7 +4,7 @@ A fully serverless image processing pipeline built with AWS services, written in
 
 ---
 
-![alt text](<image optimiser.png>)
+![alt text](<image/image optimiser.png>)
 
 ## 🚀 Features
 
