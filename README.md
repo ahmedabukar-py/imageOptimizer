@@ -14,4 +14,4 @@ A fully serverless image processing pipeline built with AWS services, written in
 - Track image status via DynamoDB
 - Generate signed CloudFront URLs for secure access
 - Fully serverless & infrastructure-as-code (Terraform)
-- Optional frontend in React hosted via S3
+- frontend in React hosted via S3
