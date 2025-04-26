@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "original_images" {
-  bucket = "image-optimizer-originals"
+  bucket        = "image-optimizer-originals"
   force_destroy = true
 
   tags = {
@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "original_images" {
 }
 
 resource "aws_s3_bucket" "optimized_images" {
-  bucket = "image-optimizer-optimized"
+  bucket        = "image-optimizer-optimized"
   force_destroy = true
 
   tags = {

@@ -1,2 +1,8 @@
 Infra/.terraform/*
 Infra/.terraform.lock.hcl
+colorful_image.png
+convertImage.py
+encoded_image.txt
+image.py
+.DS_Store
+.DS_Store?
