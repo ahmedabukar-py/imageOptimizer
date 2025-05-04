@@ -129,10 +129,10 @@ resource "aws_iam_policy" "optimize_lambda_policy" {
         Resource = "arn:aws:dynamodb:*:*:table/image_uploads"
       },
       {
-      Sid    = "AllowS3PutObject"
-      Effect: "Allow",
-      Action: "s3:PutObject",
-      Resource = ["arn:aws:s3:::image-optimizer-optimized/optimized/*","arn:aws:s3:::image-optimizer-optimized/*"]
+        Sid = "AllowS3PutObject"
+        Effect : "Allow",
+        Action : "s3:PutObject",
+        Resource = ["arn:aws:s3:::image-optimizer-optimized/optimized/*", "arn:aws:s3:::image-optimizer-optimized/*"]
       }
 
     ]

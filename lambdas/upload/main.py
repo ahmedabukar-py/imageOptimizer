@@ -38,7 +38,8 @@ def lambda_handler(event, context):
             Item={
                 'filename': {'S': filename},
                 'status': {'S': 'pending'},  # Mark the status as 'pending' upon upload
-                'upload_time': {'S': upload_time}
+                'upload_time': {'S': upload_time},
+                'email': {'S': email}
             }
         )
 

@@ -12,6 +12,16 @@ resource "aws_lambda_function" "optimize_lambda" {
   }
 
 
+  environment {
+    variables = {
+      OPTIMIZED_BUCKET       = aws_s3_bucket.optimized_images.bucket
+      DDB_TABLE              = aws_dynamodb_table.upload_table.name
+      CLOUDFRONT_DOMAIN      = aws_cloudfront_distribution.optimized_images.domain_name
+      CLOUDFRONT_KEY_PAIR_ID = var.cloudfront_key_pair_id # If needed
+      CLOUDFRONT_PRIVATE_KEY = var.cloudfront_private_key # If needed
+    }
+  }
+
   role = aws_iam_role.optimize_lambda_role.arn
 
   timeout     = 30
