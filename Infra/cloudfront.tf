@@ -52,5 +52,3 @@ resource "aws_cloudfront_origin_access_control" "oac" {
   # Control the access level to the origin
   signing_protocol = "sigv4" # This ensures secure signature is used
 }
-
-

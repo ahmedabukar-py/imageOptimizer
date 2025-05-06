@@ -17,6 +17,7 @@ def lambda_handler(event, context):
         body = json.loads(event['body'])
         filename = body['filename']
         data = body['data']  # base64 encoded image
+        email = body['email'] 
 
         # Decode image data from base64
         image_bytes = base64.b64decode(data)

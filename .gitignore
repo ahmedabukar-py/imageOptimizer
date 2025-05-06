@@ -6,3 +6,5 @@ encoded_image.txt
 image.py
 .DS_Store
 .DS_Store?
+Infra/Keys/*
+Infra/genKeyPair.sh

@@ -7,18 +7,12 @@ resource "aws_lambda_function" "optimize_lambda" {
   source_code_hash = filebase64sha256("../lambdas/optimize/function.zip")
   environment {
     variables = {
-      OPTIMIZED_BUCKET = aws_s3_bucket.optimized_images.bucket
-    }
-  }
-
-
-  environment {
-    variables = {
       OPTIMIZED_BUCKET       = aws_s3_bucket.optimized_images.bucket
       DDB_TABLE              = aws_dynamodb_table.upload_table.name
       CLOUDFRONT_DOMAIN      = aws_cloudfront_distribution.optimized_images.domain_name
-      CLOUDFRONT_KEY_PAIR_ID = var.cloudfront_key_pair_id # If needed
-      CLOUDFRONT_PRIVATE_KEY = var.cloudfront_private_key # If needed
+      CLOUDFRONT_PRIVATE_KEY = local.cloudfront_private_key
+      CLOUDFRONT_PUBLIC_KEY  = local.cloudfront_public_key
+      CLOUDFRONT_KEY_PAIR_ID = "K1FS438M0V7NIM"
     }
   }
 
